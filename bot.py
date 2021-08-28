@@ -29,7 +29,7 @@ async def start(event):
                     buttons=(
                       [Button.url('🌟 Məni Əlavə Et', 'https://t.me/FarzTagBot?startgroup=a'),
                       Button.url('📣 Kanalımız', 'https://t.me/FarzBotSs'),
-                      Button.url('🚀 Support', 'https://t.me/KenanBitcoin')]
+                      Button.url('🚀 Support', 'https://t.me/FarzBotSupport')]
                     ),
                     link_preview=False
                    )
