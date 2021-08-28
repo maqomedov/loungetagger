@@ -28,8 +28,8 @@ async def start(event):
   await event.reply("**@FarzTagBot**,  ★\nDaha Çox Məlumat üçün  **/komek**'e Basın.",
                     buttons=(
                       [Button.url('🌟 Məni Əlavə Et', 'https://t.me/FarzTagBot?startgroup=a'),
-                      Button.url('📣 Support', 'https://t.me/FarzBotSs'),
-                      Button.url('🚀 Məni Yaradan', 'https://t.me/KenanBitcoin')]
+                      Button.url('📣 Kanalımız', 'https://t.me/FarzBotSs'),
+                      Button.url('🚀 Support', 'https://t.me/KenanBitcoin')]
                     ),
                     link_preview=False
                    )
@@ -39,8 +39,8 @@ async def help(event):
   await event.reply(helptext,
                     buttons=(
                       [Button.url('🌟 Məni Əlavə Et', 'https://t.me/FarzTagBot?startgroup=a'),
-                       Button.url('📣 Support', 'https://t.me/FarzBotSs'),
-                      Button.url('🚀 Məni Yaradan', 'https://t.me/KenanBitcoin')]
+                       Button.url('📣 Kanalımız', 'https://t.me/FarzBotSs'),
+                      Button.url('🚀 Support', 'https://t.me/FarzBotSupport')]
                     ),
                     link_preview=False
                    )
