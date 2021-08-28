@@ -25,22 +25,22 @@ async def cancel(event):
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-  await event.reply("**Etiketleme Bot**, Grup veya kanaldaki neredeyse tüm üyelerden bahsedebilirim ★\nDaha fazla bilgi için **/help**'i tıklayın.",
+  await event.reply("**@FarzTagBot**,  ★\nDaha Çox Məlumat üçün  **/komek**'e Basın.",
                     buttons=(
-                      [Button.url('🌟 Beni Bir Gruba Ekle', 'https://t.me/Uye_Etiketle_Bot?startgroup=a'),
-                      Button.url('📣 Support', 'https://t.me/sohbetf'),
-                      Button.url('🚀 Sahibim', 'https://t.me/sohbet_admin')]
+                      [Button.url('🌟 Məni Əlavə Et', 'https://t.me/FarzTagBot?startgroup=a'),
+                      Button.url('📣 Support', 'https://t.me/FarzBotSs'),
+                      Button.url('🚀 Məni Yaradan', 'https://t.me/KenanBitcoin')]
                     ),
                     link_preview=False
                    )
-@client.on(events.NewMessage(pattern="^/help$"))
+@client.on(events.NewMessage(pattern="^/komek$"))
 async def help(event):
-  helptext = "**Etiketleme Bot'un Yardım Menüsü**\n\nKomut: /cancel\n Bu Komutu Etiketlemeyi Durdurmak İçin Kullana Bilirsiniz.\nKomut: /all \n  Bu komutu, başkalarına bahsetmek istediğiniz metinle birlikte kullanabilirsiniz. \n`Örnek: /all Günaydın!`  \nBu komutu yanıt olarak kullanabilirsiniz. herhangi bir mesaj Bot, yanıtlanan iletiye kullanıcıları etiketleyecek"
+  helptext = "**@FarzTagBot Kömək**\n\nKomut: /cancel\n Bu Komutu İşlədərək Tag Etməyi Dayandıra Bilərsiz.\nKomut: /all \n  Bu Komutu Tag ı Başlatmaq üçün İstifadə Edə Bilərsiz . \n`Məsələn: /all Salam!`"
   await event.reply(helptext,
                     buttons=(
-                      [Button.url('🌟 Beni Bir Gruba Ekle', 'https://t.me/Uye_Etiketle_Bot?startgroup=a'),
-                       Button.url('📣 Support', 'https://t.me/sohbetf'),
-                      Button.url('🚀 Sahibim', 'https://t.me/sohbet_admin')]
+                      [Button.url('🌟 Məni Əlavə Et', 'https://t.me/FarzTagBot?startgroup=a'),
+                       Button.url('📣 Support', 'https://t.me/FarzBotSs'),
+                      Button.url('🚀 Məni Yaradan', 'https://t.me/KenanBitcoin')]
                     ),
                     link_preview=False
                    )
@@ -50,13 +50,13 @@ async def help(event):
 async def mentionall(event):
   global anlik_calisan
   if event.is_private:
-    return await event.respond("__Bu komut gruplarda ve kanallarda kullanılabilir.!__")
+    return await event.respond("__Yalnız Gruplarda İşlədilir.!__")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond("__Yalnızca yöneticiler hepsinden bahsedebilir!__")
+    return await event.respond("__ Yalnız İdarəçilər İşlədə Bilər!__")
   
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
@@ -69,7 +69,7 @@ async def mentionall(event):
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
     return await event.respond("__Bana bir argüman ver!__")
   else:
-    return await event.respond("__Bir mesajı yanıtlayın veya başkalarından bahsetmem için bana bir metin verin!__")
+    return await event.respond("__Komutun Yanında Mesaj Olmalıdır!__")
   
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
@@ -79,7 +79,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("İşlem Başarılı Bir Şekilde Durduruldu ❌")
+        await event.respond("Bot Tag Eləməyi Dayandırdı ❌")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -97,7 +97,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("İşlem Başarılı Bir Şekilde Durduruldu ❌")
+        await event.respond("Bot Tag Eləməyi Dayandırdı ❌")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
