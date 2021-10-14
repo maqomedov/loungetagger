@@ -29,26 +29,18 @@ async def start(event):
                     buttons=(
                       [Button.url('✅ Məni Əlavə Et', 'https://t.me/FarzTaggerBot?startgroup=a'),
                       Button.url('🌐 Kanal', 'https://t.me/FarzBotsAz'),
-                      Button.url('💠 Support', 'https://t.me/FarzSupport'),
-                      Button.url('🀄 Deşeloper', 'https://t.me/maqomedoov')]
+                      Button.url('💠 Support', 'https://t.me/FarzSupport')]
                     ),
                     link_preview=False
                    )
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
-  helptext = "**Farz Tagger Help** \nƏmr : /all \nBu əmr ilə qrupda userləri tağ eliyə bilərsən. Məsələn : `/all Salam`.\nƏmr : /cancel \nBu əmr ilə tağ eləməyi dayandıra bilərsiz.
-
-
-
-await event.reply(helptext,
+  helptext = "Farz Tagger Help \nƏmr : /all \nBu əmr ilə qrupda userləri tağ eliyə bilərsən. Məsələn : /all Salam.\nƏmr : /cancel \nBu əmr ilə tağ eləməyi dayandıra bilərsiz."
+  await event.reply(helptext,
                     buttons=(
                       [Button.url('✅ Məni Əlavə Et', 'https://t.me/FarzTaggerBot?startgroup=a'),
-
-                      Button.url('🌐 Kanal', 'https://t.me/FarzBotsAz'),
-
-                      Button.url('💠 Support', 'https://t.me/FarzSupport'),
-
-                      Button.url('🀄 Deşeloper', 'https://t.me/maqomedoov')]
+                       Button.url('🌐 Kanal', 'https://t.me/FarzBotsAz'),
+                      Button.url('💠 Support', 'https://t.me/FarzSupport')]
                     ),
                     link_preview=False
                    )
