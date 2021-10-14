@@ -29,7 +29,7 @@ async def start(event):
                     buttons=(
                       [Button.url('✅ Məni Əlavə Et', 'https://t.me/FarzTaggerBot?startgroup=a'),
                       Button.url('🌐 Kanal', 'https://t.me/FarzBotsAz'),
-                      Button.url('💠 Support', 'https://t.me/FarzSupport')]
+                      Button.url('💠 Dəstək', 'https://t.me/FarzSupport')]
                     ),
                     link_preview=False
                    )
@@ -40,7 +40,7 @@ async def help(event):
                     buttons=(
                       [Button.url('✅ Məni Əlavə Et', 'https://t.me/FarzTaggerBot?startgroup=a'),
                        Button.url('🌐 Kanal', 'https://t.me/FarzBotsAz'),
-                      Button.url('💠 Support', 'https://t.me/FarzSupport')]
+                      Button.url('💠 Dəstək', 'https://t.me/FarzSupport')]
                     ),
                     link_preview=False
                    )
@@ -69,7 +69,7 @@ async def mentionall(event):
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
     return await event.respond("__Bana bir argüman ver!__")
   else:
-    return await event.respond("__Komutun Yanında Mesaj Olmalıdır!__")
+    return await event.respond("__Əmrin yanında mesaj olmalıdır!__")
   
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
@@ -79,7 +79,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("Bot Tag Eləməyi Dayandırdı ❌")
+        await event.respond("Bot Tag Eləməyi Dayandırdı❌.")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -97,7 +97,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("Bot Tag Eləməyi Dayandırdı ❌")
+        await event.respond("Bot Tag Eləməyi Dayandırdı❌.")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
