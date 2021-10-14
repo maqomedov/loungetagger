@@ -25,22 +25,30 @@ async def cancel(event):
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-  await event.reply("**@FarzTagBot**,  ★\nDaha Çox Məlumat üçün  **/komek**'e Basın.",
+  await event.reply("Salam {mention} dostum.! \nMən qrupda tağ etmək üçün kodlaşdırılmış botam🤖. \nDaha çoxu üçün /help yaza bilərsən.",
                     buttons=(
-                      [Button.url('🌟 Məni Əlavə Et', 'https://t.me/FarzTagBot?startgroup=a'),
-                      Button.url('📣 Kanalımız', 'https://t.me/FarzBotSs'),
-                      Button.url('🚀 Support', 'https://t.me/FarzBotSupport')]
+                      [Button.url('✅ Məni Əlavə Et', 'https://t.me/FarzTaggerBot?startgroup=a'),
+                      Button.url('🌐 Kanal', 'https://t.me/FarzBotsAz'),
+                      Button.url('💠 Support', 'https://t.me/FarzSupport'),
+                      Button.url('🀄 Deşeloper', 'https://t.me/maqomedoov')]
                     ),
                     link_preview=False
                    )
-@client.on(events.NewMessage(pattern="^/komek$"))
+@client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
-  helptext = "**@FarzTagBot Kömək**\n\nKomut: /cancel\n Bu Komutu İşlədərək Tag Etməyi Dayandıra Bilərsiz.\nKomut: /all \n  Bu Komutu Tag ı Başlatmaq üçün İstifadə Edə Bilərsiz . \n`Məsələn: /all Salam!`"
-  await event.reply(helptext,
+  helptext = "**Farz Tagger Help** \nƏmr : /all \nBu əmr ilə qrupda userləri tağ eliyə bilərsən. Məsələn : `/all Salam`.\nƏmr : /cancel \nBu əmr ilə tağ eləməyi dayandıra bilərsiz.
+
+
+
+await event.reply(helptext,
                     buttons=(
-                      [Button.url('🌟 Məni Əlavə Et', 'https://t.me/FarzTagBot?startgroup=a'),
-                       Button.url('📣 Kanalımız', 'https://t.me/FarzBotSs'),
-                      Button.url('🚀 Support', 'https://t.me/FarzBotSupport')]
+                      [Button.url('✅ Məni Əlavə Et', 'https://t.me/FarzTaggerBot?startgroup=a'),
+
+                      Button.url('🌐 Kanal', 'https://t.me/FarzBotsAz'),
+
+                      Button.url('💠 Support', 'https://t.me/FarzSupport'),
+
+                      Button.url('🀄 Deşeloper', 'https://t.me/maqomedoov')]
                     ),
                     link_preview=False
                    )
