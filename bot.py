@@ -25,22 +25,22 @@ async def cancel(event):
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-  await event.reply("Salam {mention} dostum.! \nMən qrupda tağ etmək üçün kodlaşdırılmış botam🤖. \nDaha çoxu üçün /help yaza bilərsən.",
+  await event.reply("Salam @{message.from_user.username} dostum.! \nMən qrupda tağ etmək üçün kodlaşdırılmış botam🤖. \nDaha çoxu üçün /help yaza bilərsən.",
                     buttons=(
-                      [Button.url('✅ Məni Əlavə Et', 'https://t.me/FarzTaggerBot?startgroup=a'),
-                      Button.url('🌐 Kanal', 'https://t.me/FarzBotsAz'),
-                      Button.url('💠 Dəstək', 'https://t.me/FarzSupport')]
+                      [Button.url('✅ Məni Əlavə Et', 'https://t.me/AzeTaggerBot?startgroup=a'),
+                      Button.url('🌐 Kanal', 'https://t.me/SmokeBots'),
+                      Button.url('🌪️ Sahibim', 'https://t.me/SmokeAndMe')]
                     ),
                     link_preview=False
                    )
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
-  helptext = "Farz Tagger Help \nƏmr : /all \nBu əmr ilə qrupda userləri tağ eliyə bilərsən. Məsələn : /all Salam.\nƏmr : /cancel \nBu əmr ilə tağ eləməyi dayandıra bilərsiz."
+  helptext = "Aze Tagger Help \nƏmr : /all \nBu əmr ilə qrupda userləri tağ eliyə bilərsən. Məsələn : /all Salam.\nƏmr : /cancel \nBu əmr ilə tağ eləməyi dayandıra bilərsiz."
   await event.reply(helptext,
                     buttons=(
-                      [Button.url('✅ Məni Əlavə Et', 'https://t.me/FarzTaggerBot?startgroup=a'),
-                       Button.url('🌐 Kanal', 'https://t.me/FarzBotsAz'),
-                      Button.url('💠 Dəstək', 'https://t.me/FarzSupport')]
+                      [Button.url('✅ Məni Əlavə Et', 'https://t.me/AzeTaggerBot?startgroup=a'),
+                       Button.url('🌐 Kanal', 'https://t.me/SmokeBots'),
+                      Button.url('🌪️ Sahibim', 'https://t.me/SmokeAndMe')]
                     ),
                     link_preview=False
                    )
