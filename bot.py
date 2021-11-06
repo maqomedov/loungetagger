@@ -25,17 +25,17 @@ async def cancel(event):
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-  await event.reply("Salam @{message.from_user.username} dostum.! \nMən qrupda tağ etmək üçün kodlaşdırılmış botam🤖. \nDaha çoxu üçün /help yaza bilərsən.",
+  await event.reply("Salam Akula🦈.! \nMən qrupda akulaları tağ etmək üçün botam🦈. \nDaha çoxu üçün /help yaza bilərsən.",
                     buttons=(
-                      [Button.url('✅ Məni Əlavə Et', 'https://t.me/AzeTaggerBot?startgroup=a'),
-                      Button.url('🌐 Kanal', 'https://t.me/SmokeBots'),
-                      Button.url('🌪️ Sahibim', 'https://t.me/SmokeAndMe')]
+                      [Button.url('🦈 Məni qrupa əlavə et 🦈', 'https://t.me/AkulaTaggerBot?startgroup=a')]
+                      [Button.url('🦈 Akula House 🦈', 'https://t.me/AkulaHouse')]
+                      [Button.url('🦈 Sahibim 🦈', 'https://t.me/maqomedohv')]
                     ),
                     link_preview=False
                    )
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
-  helptext = "Aze Tagger Help \nƏmr : /all \nBu əmr ilə qrupda userləri tağ eliyə bilərsən. Məsələn : /all Salam.\nƏmr : /cancel \nBu əmr ilə tağ eləməyi dayandıra bilərsiz."
+  helptext = "Akula Tagger Help \nƏmr : /all \nBu əmr ilə qrupda userləri tağ eliyə bilərsən. Məsələn : /all Salam.\nƏmr : /cancel \nBu əmr ilə tağ eləməyi dayandıra bilərsiz."
   await event.reply(helptext,
                     buttons=(
                       [Button.url('✅ Məni Əlavə Et', 'https://t.me/AzeTaggerBot?startgroup=a'),
