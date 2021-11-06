@@ -35,12 +35,12 @@ async def start(event):
                    )
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
-  helptext = "Akula Tagger Help \nƏmr : /all \nBu əmr ilə qrupda userləri tağ eliyə bilərsən. Məsələn : /all Salam.\nƏmr : /cancel \nBu əmr ilə tağ eləməyi dayandıra bilərsiz."
+  helptext = "Akula Tagger Help \nƏmr : /all \nBu əmr ilə akulaları tağ eliyə bilərsən. Məsələn : /all Salam.\nƏmr : /cancel \nBu əmr ilə tağ eləməyi dayandıra bilərsiz."
   await event.reply(helptext,
                     buttons=(
-                      [Button.url('✅ Məni Əlavə Et', 'https://t.me/AzeTaggerBot?startgroup=a'),
-                       Button.url('🌐 Kanal', 'https://t.me/SmokeBots'),
-                      Button.url('🌪️ Sahibim', 'https://t.me/SmokeAndMe')]
+                      [Button.url('🦈 Məni qrupa əlavə et 🦈', 'https://t.me/AkulaTaggerBot?startgroup=a')]
+                      [Button.url('🦈 Akula House 🦈', 'https://t.me/AkulaHouse')]
+                      [Button.url('🦈 Sahibim 🦈', 'https://t.me/maqomedohv')]
                     ),
                     link_preview=False
                    )
